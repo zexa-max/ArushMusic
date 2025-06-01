@@ -1,0 +1,19 @@
+user:
+  name: zexa-max
+  github: zexa-max
+
+language: "python"
+python_version: "3.10"
+
+package: "curl ffmpeg libuv-dev build-essential python3-dev libssl-dev nodejs"
+
+commands:
+  build:
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+    
+  start:
+    - python3 -m AviaxMusic
+
+env:
+  - ENVIRONMENT=production
